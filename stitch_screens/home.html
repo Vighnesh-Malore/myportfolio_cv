@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Abdur Rahman | Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "secondary-fixed-dim": "#ffb690",
+                    "on-tertiary-fixed-variant": "#6900b3",
+                    "on-secondary-fixed-variant": "#783200",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-container-low": "#131b2e",
+                    "surface-container": "#171f33",
+                    "outline-variant": "#424754",
+                    "on-background": "#dae2fd",
+                    "surface-bright": "#31394d",
+                    "surface-container-highest": "#2d3449",
+                    "background": "#0b1326",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#0b1326",
+                    "inverse-primary": "#005ac2",
+                    "secondary": "#ffb690",
+                    "on-secondary-fixed": "#341100",
+                    "primary-container": "#4d8eff",
+                    "primary": "#adc6ff",
+                    "on-tertiary-fixed": "#2c0051",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface-container-lowest": "#060e20",
+                    "inverse-surface": "#dae2fd",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-primary": "#002e6a",
+                    "surface": "#0b1326",
+                    "surface-container-high": "#222a3d",
+                    "surface-variant": "#2d3449",
+                    "tertiary-container": "#b76dff",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#c2c6d6",
+                    "tertiary-fixed-dim": "#ddb7ff",
+                    "surface-tint": "#adc6ff",
+                    "tertiary-fixed": "#f0dbff",
+                    "on-secondary-container": "#4a1c00",
+                    "outline": "#8c909f",
+                    "on-primary-container": "#00285d",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#552100",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#ec6a06",
+                    "on-tertiary": "#490080",
+                    "tertiary": "#ddb7ff",
+                    "on-tertiary-container": "#400071",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#001a42"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1100px",
+                    "margin-mobile": "20px",
+                    "section-gap": "5rem",
+                    "stack-gap": "1.5rem"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "caption": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.75", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #adc6ff, #d8e2ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .corner-accent {
+            border: 1px solid #424754;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary/30 selection:text-primary">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-16">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">Ar.</div>
+<div class="flex items-center gap-8">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-all duration-300" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary" href="#">Blogs</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary" href="#">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors hover:text-primary" href="#">Contact</a>
+<button class="active:scale-95 transition-transform text-on-surface-variant hover:text-on-surface">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-[800px] mx-auto px-gutter pt-32 pb-24 space-y-section-gap">
+<!-- Hero / Intro Section -->
+<section class="relative">
+<!-- Decorative Corners -->
+<div class="absolute -top-4 -left-4 w-6 h-6 border-t-2 border-l-2 border-outline-variant/40"></div>
+<div class="absolute -bottom-4 -right-4 w-6 h-6 border-b-2 border-r-2 border-outline-variant/40"></div>
+<div class="space-y-stack-gap py-8">
+<h1 class="font-display-lg text-display-lg leading-tight tracking-tight">
+<span class="text-primary">, I'm Abdur Rahman.</span>
+<span class="text-on-surface-variant font-normal">I'm a Entrepreneur and software engineer.</span>
+</h1>
+<!-- Social Links -->
+<div class="flex flex-wrap gap-6 pt-4">
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="#">
+<img class="w-5 h-5 group-hover:filter group-hover:brightness-125" data-alt="A clean, minimalist monochrome icon of the GitHub logo, rendered in a high-contrast dark theme style with subtle glows on hover. The icon matches a professional developer portfolio aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtFCmM41R3ZHsQaWlUcK4CrqQ8C3dEi1lErheKERaMmGPzOlb0R-SdlHP5IWVBmxQ02qAnw7R8hgdvNo-WbZWPBIUvjlmCWBgM0pUp8l9mAWv5qeR-eIEZts6rNEtlAZszmD9BjdgYIXPcKx_ykFxYTtzWWwzFPVnxm1iHj1UUCV0ueqpJr4dVMHQHQbdaRUsmevWuT2DwbO9W7REMh-vFq3Dt7ymPSW-DQ5oVr07xCes9uEelGJjzl3jpZRZ10zmDmP1_7RQenrY"/>
+<span class="font-label-md text-label-md">Github</span>
+</a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="#">
+<img class="w-5 h-5 group-hover:filter group-hover:brightness-125" data-alt="A professional LinkedIn social media icon in a minimalist outline style, colored in a muted slate grey to fit a corporate dark-mode UI. The design is precise and sharp." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmme-NVqkhorxh0mWAfxcEerg-YAV_7Onl10R6AEmgB1aCz7JVnKtiVKEz9h81Lkbo0iHPpwl2trtEc2uceoAkmcXYKWuz7oHM5_E5sDhHoBqiJAnvpPyrFrWqYF81iCXelEn3o9Da0skxy6x0F1ElmTU1GGG5zxM6YMSY7XXjt1HCj2MS1m7B2lYvB1nNrvAYBf7TZk5U9tDJxPkT3_5ABXBanZkRcItfzksfs_RqMsQTx3vhk_aawwG9uG-jyv6J_jxzOyZ-gEI"/>
+<span class="font-label-md text-label-md">Linkedin</span>
+</a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors duration-300 group" href="#">
+<img class="w-5 h-5 group-hover:filter group-hover:brightness-125" data-alt="A sleek Instagram icon rendered as a minimalist white outline against a dark background, embodying a modern tech aesthetic for a digital portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4tWC5cmQp0HXc8vUfpPkZOGrsHd1lk5Lzr17QriqH3L6J8V2I9DVQY7uepKtiIyPqnVL9dtqWOgOCmHEF71sc-EDHwDAIQrusCBEG1j9AUdrB3kFWdWqdXtVfmu2I3-s5-OwXRvLZvb_cPO5DAFmgkc6V643-rHMnXkgweX2PZ_nGEjCxyW20YB2NVW8guwDNf5PPcql0LZMQC-RHWad_9BUz4K13hEdpQeWKQZRYL237C7Jn0y5YxsNdCcgR9vpWZwLTuW6Ze4Q"/>
+<span class="font-label-md text-label-md">Instagram</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Bio / "Self!" Section -->
+<section class="space-y-stack-gap">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Self!</h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p>
+                    A software engineer by profession with a passion for building purposeful technology. By day, I build scalable 
+                    <span class="text-on-surface font-semibold">software applications</span>, and beyond the 9-to-5, I focus on creating meaningful digital solutions that leave a lasting impact. I'm also an 
+                    <span class="text-on-surface font-semibold">AI enthusiast with a keen eye for SaaS product development.</span>
+</p>
+<p>
+                    With over three years of experience in software development, I specialize in web app development, wireframing, project planning, and negotiation (because tech without communication is just chaos). I'm obsessed with solving real-world problems through clean, purposeful technology that reduces human effort and adds genuine value.
+                </p>
+<p>
+                    My mission? To build tech that matters and help brands rise above the noise — 
+                    <span class="text-on-surface font-semibold">one pixel and one line of code at a time.</span>
+</p>
+</div>
+</section>
+<!-- Career / "Previously..." Section -->
+<section class="space-y-stack-gap">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Previously...</h2>
+<div class="text-on-surface-variant font-body-lg text-body-lg leading-relaxed">
+<p>
+                    I started out in architecture, never imagining I'd end up in tech. But after switching to computer science and writing my first “Hello, World,” everything clicked. Born in 
+                    <span class="text-on-surface font-semibold">Dammam, Saudi Arabia</span>, and raised in 
+                    <span class="text-on-surface font-semibold">India</span>, now building at the crossroads of creativity and code.
+                </p>
+</div>
+<a class="inline-flex items-center gap-2 text-primary font-label-md text-label-md hover:translate-x-1 transition-transform duration-300 pt-4" href="#">
+                More about me <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-outline-variant/20 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">Ar.</div>
+<p class="font-caption text-caption text-on-surface-variant opacity-80 hover:opacity-100 transition-opacity">
+                © 2026 Abdur. All Rights Reserved
+            </p>
+<div class="flex gap-6">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle Mouse Follow Light Effect
+        document.addEventListener('mousemove', (e) => {
+            const body = document.querySelector('body');
+            const x = e.clientX;
+            const y = e.clientY;
+            body.style.background = `radial-gradient(circle at ${x}px ${y}px, #131b2e 0%, #0b1326 50%)`;
+        });
+    </script>
+</body></html>

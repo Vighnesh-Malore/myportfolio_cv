@@ -1,0 +1,136 @@
+{
+    "profile": {
+        "name": "Vighnesh Malore",
+        "title": "Full Stack Developer",
+        "summary": "Computer Science Undergrad — Mobile & Full Stack Developer — Flutter, React, Java — Networking & Database Architecture"
+    },
+    "contact": {
+        "phone": "+91-8879083241",
+        "email": "malorevighnesh@gmail.com",
+        "linkedin": "https://linkedin.com/in/vighnesh-malore",
+        "github": "https://github.com/vighnesh-malore"
+    },
+    "skills": {
+        "mobile_development": [
+            "Flutter",
+            "Firebase",
+            "SQLite"
+        ],
+        "frontend": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Vue.js"
+        ],
+        "backend": [
+            "Java Servlets",
+            "Node.js",
+            "Express.js"
+        ],
+        "databases": [
+            "MySQL",
+            "PL/SQL",
+            "SQLite"
+        ],
+        "game_development": [
+            "Unity",
+            "C#"
+        ],
+        "tools": [
+            "Git",
+            "GitHub",
+            "Firebase Hosting"
+        ],
+        "networking": [
+            "TCP/IP",
+            "HTTP/HTTPS",
+            "Client–Server Architecture"
+        ]
+    },
+    "projects": [
+        {
+            "name": "Bill & Warranty Tracker",
+            "tech_stack": [
+                "Flutter",
+                "Firebase"
+            ],
+            "year": 2025,
+            "type": "Live Project",
+            "highlights": [
+                "Cross-platform mobile application to store and manage bills and warranty details securely",
+                "Integrated Firebase Authentication, Firestore database, and cloud storage for real-time synchronization",
+                "Deployed and hosted using Firebase Hosting"
+            ]
+        },
+        {
+            "name": "Habit Tracker Application",
+            "tech_stack": [
+                "Flutter",
+                "SQLite"
+            ],
+            "year": 2025,
+            "type": "Mobile App",
+            "highlights": [
+                "Offline-first mobile app to track daily habits with local SQLite database integration",
+                "Implemented CRUD operations and clean UI for consistent habit monitoring"
+            ]
+        },
+        {
+            "name": "Dental Clinic Website (Frontend)",
+            "tech_stack": [
+                "React",
+                "Vue.js"
+            ],
+            "year": 2025,
+            "type": "Web Frontend",
+            "highlights": [
+                "Designed and developed responsive frontend pages for a dental clinic website",
+                "Implemented reusable UI components and ensured mobile responsiveness"
+            ]
+        },
+        {
+            "name": "Space Shooting Game",
+            "tech_stack": [
+                "Unity",
+                "C#"
+            ],
+            "year": 2024,
+            "type": "Game",
+            "highlights": [
+                "Single-player 2D space shooter game with multiple levels and enemy mechanics",
+                "Handled player movement, collision detection, and scoring logic using C#"
+            ]
+        },
+        {
+            "name": "Money Management System",
+            "tech_stack": [
+                "Java Servlets",
+                "MySQL",
+                "PL/SQL"
+            ],
+            "year": 2024,
+            "type": "Web Application",
+            "highlights": [
+                "Web-based financial management system to track income and expenses",
+                "Used PL/SQL procedures for optimized database transactions and reporting"
+            ]
+        }
+    ],
+    "certifications": [
+        {
+            "title": "Software Conceptual Design",
+            "issuer": "NPTEL",
+            "period": "Aug–Sep 2024"
+        }
+    ],
+    "education": [
+        {
+            "degree": "B.Sc. Computer Science",
+            "institution": "Pillai College of Arts, Commerce & Science (Autonomous)",
+            "location": "Navi Mumbai",
+            "status": "In Progress",
+            "expected_graduation": "April 2026"
+        }
+    ]
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Get in Touch - DevPortfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-tertiary-fixed-variant": "#6900b3",
+                        "on-secondary-fixed-variant": "#783200",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-container-low": "#131b2e",
+                        "surface-container": "#171f33",
+                        "outline-variant": "#424754",
+                        "on-background": "#dae2fd",
+                        "surface-bright": "#31394d",
+                        "surface-container-highest": "#2d3449",
+                        "background": "#0b1326",
+                        "primary-fixed": "#d8e2ff",
+                        "surface-dim": "#0b1326",
+                        "inverse-primary": "#005ac2",
+                        "secondary": "#ffb690",
+                        "on-secondary-fixed": "#341100",
+                        "primary-container": "#4d8eff",
+                        "primary": "#adc6ff",
+                        "on-tertiary-fixed": "#2c0051",
+                        "on-primary-fixed-variant": "#004395",
+                        "surface-container-lowest": "#060e20",
+                        "inverse-surface": "#dae2fd",
+                        "primary-fixed-dim": "#adc6ff",
+                        "on-primary": "#002e6a",
+                        "surface": "#0b1326",
+                        "surface-container-high": "#222a3d",
+                        "surface-variant": "#2d3449",
+                        "tertiary-container": "#b76dff",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#c2c6d6",
+                        "tertiary-fixed-dim": "#ddb7ff",
+                        "surface-tint": "#adc6ff",
+                        "tertiary-fixed": "#f0dbff",
+                        "on-secondary-container": "#4a1c00",
+                        "outline": "#8c909f",
+                        "on-primary-container": "#00285d",
+                        "error": "#ffb4ab",
+                        "on-secondary": "#552100",
+                        "on-error-container": "#ffdad6",
+                        "secondary-container": "#ec6a06",
+                        "on-tertiary": "#490080",
+                        "tertiary": "#ddb7ff",
+                        "on-tertiary-container": "#400071",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#001a42"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1100px",
+                        "margin-mobile": "20px",
+                        "section-gap": "5rem",
+                        "stack-gap": "1.5rem"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "caption": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "1.75", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "caption": ["12px", { "lineHeight": "1.4", "fontWeight": "500" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .calendly-overlay {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col font-body-md text-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 z-50">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-16">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">
+                DevPortfolio
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Blogs</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Skills</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="#">Contact</a>
+<button class="active:scale-95 transition-transform text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+</div>
+<div class="md:hidden flex items-center">
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</nav>
+</header>
+<main class="flex-grow flex items-center justify-center pt-24 pb-12 px-gutter">
+<div class="max-w-container-max w-full grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<!-- Content Left -->
+<div class="space-y-8 animate-fade-in">
+<h1 class="font-display-lg text-display-lg md:text-display-lg text-on-surface">
+                    Get in Touch
+                </h1>
+<div class="space-y-6 max-w-md">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Want to chat or collaborate on a project? 
+                        Drop me an email at 
+                        <a class="text-primary hover:underline font-medium transition-all" href="mailto:abdur.rahman19@outlook.com">abdur.rahman19@outlook.com</a>, 
+                        message me on 
+                        <a class="text-primary hover:underline font-medium transition-all" href="#">LinkedIn</a>, 
+                        or schedule a quick call using the calendar.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Let's also connect!
+                    </p>
+</div>
+<div class="flex gap-4 pt-4">
+<a class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant/30 bg-surface-container hover:border-primary transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">mail</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-lg border border-outline-variant/30 bg-surface-container hover:border-primary transition-all group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">link</span>
+</a>
+</div>
+</div>
+<!-- Calendar Widget Right -->
+<div class="relative group">
+<!-- Decorative Glow Background -->
+<div class="absolute -inset-4 bg-primary/5 blur-3xl rounded-full opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative bg-[#ffffff] rounded-xl shadow-2xl overflow-hidden border border-white/10 calendly-overlay">
+<!-- Calendly Header (Mocked) -->
+<div class="p-6 border-b border-slate-100">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-slate-800 font-bold text-xl text-center w-full">Select a Day</h2>
+<div class="absolute top-0 right-0 bg-[#4d4d4d] text-white text-[8px] font-bold px-4 py-1 rotate-45 translate-x-3 translate-y-1 shadow-sm">
+                                POWERED BY Calendly
+                            </div>
+</div>
+<!-- Month Navigator -->
+<div class="flex items-center justify-between mb-8 px-8">
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<span class="text-slate-700 font-semibold">June 2026</span>
+<button class="text-slate-400 hover:text-primary">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<!-- Calendar Grid -->
+<div class="grid grid-cols-7 gap-y-6 text-center text-xs font-semibold text-slate-400 mb-6">
+<div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div><div>Sun</div>
+<!-- Row 1 -->
+<div class="relative flex justify-center">
+<button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20 transition-colors">1</button>
+<div class="absolute bottom-1 w-1 h-1 bg-primary rounded-full"></div>
+</div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">2</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">3</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">4</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">5</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">6</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">7</button></div>
+<!-- Row 2 -->
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">8</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">9</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">10</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">11</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">12</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">13</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">14</button></div>
+<!-- Row 3 -->
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">15</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">16</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">17</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">18</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">19</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">20</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">21</button></div>
+<!-- Row 4 -->
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">22</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">23</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">24</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">25</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">26</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">27</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">28</button></div>
+<!-- Row 5 -->
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">29</button></div>
+<div class="flex justify-center"><button class="w-9 h-9 flex items-center justify-center rounded-full text-primary bg-primary/10 hover:bg-primary/20">30</button></div>
+</div>
+<!-- Timezone Selector -->
+<div class="mt-8">
+<label class="text-[10px] font-bold text-slate-700 block uppercase mb-1">Time zone</label>
+<div class="flex items-center text-xs text-slate-600 gap-1 cursor-pointer hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-sm">public</span>
+<span>India Standard Time (1:13pm)</span>
+<span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-outline-variant/20 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">DevPortfolio</div>
+<div class="font-caption text-caption text-on-surface-variant">© 2024 Developer Portfolio. Built with precision.</div>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-caption text-caption" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-caption text-caption" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-caption text-caption" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for calendar buttons
+        document.querySelectorAll('.grid button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove previous selection highlight
+                document.querySelectorAll('.grid button').forEach(btn => {
+                    btn.classList.remove('ring-2', 'ring-primary', 'bg-primary', 'text-white');
+                    btn.classList.add('text-primary', 'bg-primary/10');
+                });
+                
+                // Add selection highlight
+                this.classList.remove('bg-primary/10', 'text-primary');
+                this.classList.add('ring-2', 'ring-primary', 'bg-primary', 'text-white');
+            });
+        });
+
+        // Simple fade-in effect for the content
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = document.querySelectorAll('.animate-fade-in');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    el.style.transition = 'all 0.6s ease-out';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, 100 * index);
+            });
+        });
+    </script>
+</body></html>

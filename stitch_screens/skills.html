@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Skills | DevPortfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "secondary-fixed-dim": "#ffb690",
+                    "on-tertiary-fixed-variant": "#6900b3",
+                    "on-secondary-fixed-variant": "#783200",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-container-low": "#131b2e",
+                    "surface-container": "#171f33",
+                    "outline-variant": "#424754",
+                    "on-background": "#dae2fd",
+                    "surface-bright": "#31394d",
+                    "surface-container-highest": "#2d3449",
+                    "background": "#0b1326",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#0b1326",
+                    "inverse-primary": "#005ac2",
+                    "secondary": "#ffb690",
+                    "on-secondary-fixed": "#341100",
+                    "primary-container": "#4d8eff",
+                    "primary": "#adc6ff",
+                    "on-tertiary-fixed": "#2c0051",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface-container-lowest": "#060e20",
+                    "inverse-surface": "#dae2fd",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-primary": "#002e6a",
+                    "surface": "#0b1326",
+                    "surface-container-high": "#222a3d",
+                    "surface-variant": "#2d3449",
+                    "tertiary-container": "#b76dff",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#c2c6d6",
+                    "tertiary-fixed-dim": "#ddb7ff",
+                    "surface-tint": "#adc6ff",
+                    "tertiary-fixed": "#f0dbff",
+                    "on-secondary-container": "#4a1c00",
+                    "outline": "#8c909f",
+                    "on-primary-container": "#00285d",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#552100",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#ec6a06",
+                    "on-tertiary": "#490080",
+                    "tertiary": "#ddb7ff",
+                    "on-tertiary-container": "#400071",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#001a42"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1100px",
+                    "margin-mobile": "20px",
+                    "section-gap": "5rem",
+                    "stack-gap": "1.5rem"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "caption": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.75", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+        .skill-card {
+            background-color: #111111;
+            border: 1px solid #1E293B;
+            transition: all 0.3s ease;
+        }
+        .skill-card:hover {
+            border-color: #adc6ff;
+            transform: translateY(-2px);
+            background-color: #171f33;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md antialiased overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 z-50">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-16">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">DevPortfolio</span>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Blogs</a>
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1" href="#">Skills</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Contact</a>
+<button class="active:scale-95 transition-transform text-on-surface-variant hover:text-primary">
+<span class="material-symbols-outlined">dark_mode</span>
+</button>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 px-gutter max-w-container-max mx-auto">
+<!-- Hero Intro -->
+<section class="max-w-3xl mb-section-gap">
+<h1 class="font-display-lg text-display-lg mb-6">Skills</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-4">
+                Skills that build things. Attitude that scales. Want the full story? My resume's just one click away. 👇
+            </p>
+<a class="group inline-flex items-center text-primary font-label-md text-label-md active:scale-95 transition-all" href="#">
+                Download My Resume
+                <span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</section>
+<!-- Technical Skills Section -->
+<section class="mb-section-gap">
+<div class="flex items-center gap-3 mb-stack-gap">
+<span class="text-2xl">💻</span>
+<h2 class="font-headline-md text-headline-md">Technical</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Tech Card -->
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="HTML" class="w-12 h-12 mb-4" data-alt="A professional flat design vector icon of the HTML5 logo with its characteristic orange shield and white text. The icon is isolated on a clean transparent-style background, fitting into a high-performance dark mode UI with soft blue and gray accents. The visual style is sharp, modern, and aligned with corporate engineering-led SaaS aesthetics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlLm_VUUCLrMR6vK15ZjA5kiomC1TDgChfbCKovXRZa6ZLKCzvt5L18LugKttlhHAOO9_P2fZV9KzxpqOEJsuLJIazYUEq4dyVqZTb_2oSOOTpH6cllO4Ollt0xdqYS_LBbpx_ddHs3RW6SIaA92DUjG8y_r2TUtLgZUxj5uzRZhFpWssJmtC5JtGv7KAJRc4bDuClsPEjli9qF9Netqe_5Ovx2pDvw9TmC-iC9glTTaSNcMyecvGVyQYSfttCxppJDkKc2dMsCDo"/>
+<span class="font-label-md text-label-md">HTML</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="CSS" class="w-12 h-12 mb-4" data-alt="A high-quality vector icon representing CSS3 with its signature blue shield and white 3. The icon is rendered in a minimalist flat style, designed for a professional developer portfolio in dark mode. The lighting is neutral, focusing on clarity and precision, consistent with a modern minimalist corporate tech dashboard layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVB3PvBYGW4QqHvH4VmrQzl4RHiwtTfHDmwdE2naQLQ7Ax0zQHvpZZjo4UhlHtgr8IZQPmaGvwfhY4H6cgM7BgYn4_VrKRpDNCZFLx-pSxCgZtrlKzIRmRecvnVPyA0nXVw36HYqobFV3AjEk5VBx4KyNzfeC21xMlMi1GT0DUiUpSYBE2j4qicNdTlbFv8bIUuEaAHnDcCvMFMt-XxYWb1RBt4U9klCgZ-1eBLgEQzOPMDzU2ufzNfMKrH1voN2DPAPT0T3XGQME"/>
+<span class="font-label-md text-label-md">CSS</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="Bootstrap" class="w-12 h-12 mb-4" data-alt="A purple Bootstrap logo icon in a clean, professional flat vector design. The icon is optimized for a dark-themed user interface, featuring vibrant purple tones that contrast beautifully against a deep navy-black background. The mood is technical and efficient, capturing the essence of modern web development tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA6R0qpQCcGLg9s4nc3G3lXCuUC4Aiut_T_zq936z4hhwk4lCi4JgIkzIonKJ-fzwq4TqOmJf4BR8_QwCYaP67Jo-_xOlmG_ozEaULZ3ZpyR8LaLSVAqgxH7gA5HWnbmzg7lWl0Y93T679AvqYXreAuL6Czh9LRx1vIjknisgRALTZf_YoQ9tPAKF2JNsGC9VNjn9uVVTTYg7XHsCB6u4NkjPyj4GjXl7oVuVKA-8yJU9xTe5s9eZKMBAq670LNvnC-jvFGOrVu6o"/>
+<span class="font-label-md text-label-md">Bootstrap</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="JavaScript" class="w-12 h-12 mb-4" data-alt="A bright yellow JavaScript (JS) logo icon in a minimalist square format. The visual is sharp and clear, intended for a technical skills grid on a luxury dark mode portfolio. The style is geometric and professional, emphasizing expertise in software engineering and modern front-end web standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbtMF1L-FPg88HXXTDCXAsdZYFLfKmt4P7DpB7OG8e1MA_Q4RKuozm-iYmMGuLHA0bhrM2XbvfIBnEsd-FZd4Wd5ZwDSdil4k3OjjDVOhZt4JjLmbYcGNipFwA0wMC3ou3YpIWjaFtQMj4Q8OB6KAL_W4eajvulzD7pbmPHsO-yf0RNg5YYhPVBJvcJ6cyYikNi5kgvYaf1rLv59FVLVSgnH8oO1rap8lGj-3P5Hk4rwGEiTtaO4RxbPpq-ThiuKj5I7HbKp4fakU"/>
+<span class="font-label-md text-label-md">JavaScript</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="React" class="w-12 h-12 mb-4" data-alt="A vibrant React.js atom icon with glowing blue orbits on a dark background. The style is modern and minimalist, utilizing clean lines and a subtle technological aesthetic. It fits seamlessly into a corporate-modern UI that focuses on engineering precision and high-performance development frameworks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQXBST8Q0I2awvzdP7nl6AiDKWWZ36eiO3ggkwUkTFFpms32_y87vsd9qlyz_P6T0Jw_34Fng-7un0hVAU0VwiHs6V5L6cMXHQHheCsfbLbVKE2nG7RXPOH7PnoS8DS1EAe46dzXuAgbNFVzNyoeZVW9xabdBxI7izZJEaM4uqwsXhdgVTFYn1cl8iilT9OO50D9TN4fTwEyA8_PKsl9_ujK4TYLuABozE_zcC0-OEa9inpN-uQp7UE2z870U_GF7TlAB_CRD-Hg"/>
+<span class="font-label-md text-label-md">React</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="TypeScript" class="w-12 h-12 mb-4" data-alt="A professional TypeScript logo icon featuring the bold white TS characters on a royal blue square background. The image is a sharp, flat vector designed for inclusion in a structured 12-column grid within a dark-themed developer dashboard. It conveys trust, precision, and advanced technical knowledge." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoyGtfYjjgEdjJk0zM8EWMcSuVDwMLVLRzPMPSPNCT7Et8AZgkSGRGQUFe03NV2DLqVGRH3MzqXzZOcMb1X0BdxR42ZSFmzw2HnTIi74CIy5gmJSt5NcDrhJhJLhic_7RLN3c8uwF9G4PR6UDaZ62SiAYdcPC6BKvyrhIoQQXzMWId0-5GlYxJz1nvxSxFePUd1RMo8OsWW4hDFXlMJbBk0au7QxLONSA5hzFVtJbUh4xR1dhviCOjJWjpk51dfbJnT3MUpjgn4ns"/>
+<span class="font-label-md text-label-md">TypeScript</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="Angular" class="w-12 h-12 mb-4" data-alt="A striking red Angular shield logo in a minimalist vector style. The design is bold and centered, optimized for high visibility on a dark UI surface. The aesthetic is clean and corporate, reflecting professional software architecture and enterprise-grade web development expertise." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA_duhK1Bm8Vj8XoAQt5LxpiqkN4Hgl5jVXFx1H73_YG7DZOp0b8483ENWi0s97Xp_7SrNL2XLJM0YL41qHGhxCRnDBzag6hpoBPdYoK7xGpkOOWP-QWRSh1cJFpFbM4AvlUHRfWtitSBFHdvj9pRBnYIJLNtmch7A-AU3-xvKiegwdpzXeVkcIVh7ZDb6kId_RqY1bOaIkttkAxX0IkzmIRED4jjlH_D26eNJuWkiqRzYxO1vfkrOSzMfOksSq73ITyhJRuY15FQ"/>
+<span class="font-label-md text-label-md">Angular</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="Node.js" class="w-12 h-12 mb-4" data-alt="A green Node.js hexagon logo icon in a clean professional flat design. The icon is rendered with precise geometric shapes, suitable for a technical overview on a minimalist SaaS website. The color palette is vibrant against the dark surface, emphasizing back-end development proficiency." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZYKXjEJwCakK5fHOMg8ThMLGVYo8aoRTV1YkNbsHOUktXUYLkc6I7QqzMO09vpuLFV0tGc22WqKOcKkjBcLn9SoQolE3FE6KROwdl5JUooTKxSwTTGb_IWC12gN8BsOhPBP65wInpDYbxfy6J_hULw5glvat3GaXgLRIb02qLyXjkm9p1wXQgN87Oc7XoLVD_f-QVNGhOIHJHVlQ2EZwoOllV6PzxOIcW9-7ziSiyv1F0KYXiX-nfuzGkUrpNmzsvucmEDxJvAg8"/>
+<span class="font-label-md text-label-md">Node.js</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="npm" class="w-12 h-12 mb-4" data-alt="The red and white npm logo in a minimalist block format. The icon is sharp and modern, designed for a technical ecosystem overview. It uses high-contrast colors to stand out on a dark navy surface, reflecting professional package management and DevOps capabilities in a structured grid layout." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqtXTGwEQWTxJmX0e1UBp1w1gwx7S5eVCB4e2ZZfu1x7bsFrROiWg-hXRvdmFjpkG0oWQ4iPwGRWINKSQ5NLmq7AB8C46zib5JjkQrchOiWeTGSc3dxwOA_ZgJjS9oPE7vnG_GaRzankTOjN66-ri4qf4wT6OI2Q9F_Ex_tHiuLqRcdLZhCsvMjHcm6cGkWWA_2ILTAVL1t9jaCRhYKfMbXmJq6Pd_eUK2-3oMXFcKCeRyA4WnsmBtW6QDCPHMeFQ0m0JQUuJGoWg"/>
+<span class="font-label-md text-label-md">npm</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<div class="w-12 h-12 mb-4 flex items-center justify-center font-bold text-2xl text-on-surface-variant">ex</div>
+<span class="font-label-md text-label-md">Express.js</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<img alt="Docker" class="w-12 h-12 mb-4" data-alt="A blue Docker whale logo carrying containers in a clean flat design. The icon represents containerization and modern infrastructure, rendered with high clarity for a developer portfolio. The style is minimal and professional, fitting into a dark-themed technical skill set grid." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKNQEA1OoxGj4jIkLN6jjvT7HOoSkGBCPxoMboJYzgLpiIBIP-LYlmrc7TZ8CrNM_4Lsnbg9m6cmbHI1ohNaoD_gVytE2d8ZPZGyQ0U3-EFgSFB77l4jhnU9uFre8f9YANlR3LH9l4sg8Jn3CVJVzDsigNT-iq5QI8Sd98Umd4OCdqDixzkFeorvkR_XxIOmEMebtZKrlASfsm06wssZhi0HJcrOAmZz6KpoVj9YorR2esE1emuJ2-Wcl4h2mnqSTIOlTSCh-MdBw"/>
+<span class="font-label-md text-label-md">Docker &amp; Kubernetes</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="GitLab" class="w-12 h-12 mb-4" data-alt="The vibrant orange and yellow GitLab fox head logo in a minimalist geometric style. The design is modern and clean, optimized for an engineering-led dashboard. It emphasizes collaboration and version control expertise through a sharp, high-contrast visual that pops against the dark UI background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtC0W1D0NSM4a-3oTGe6IbqVeOOpT8_j1GdA6I4a8CRjCryb1I21W55NPkZrkzUmS8L9hFZiYdYyEw-iGtMOAV3fbAOszs7bd_0q1ONs93hDTr6A15ZLOTtDvq2gRz-f4acMEa-xRMyHLma2FGZlqkG9ahqm_liJo0xdkvfyolmPQHJ5NYW948ga6QIomz8YUsjp4LwCf_Am9GcwYXI9xxFqmqBWMz3KuEA-atmQhjosFlYvGkvgUTErI0WkVhLUMl4QozeOOyC_Y"/>
+<span class="font-label-md text-label-md">Git/Gitlab</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="PostgreSQL" class="w-12 h-12 mb-4" data-alt="The blue PostgreSQL elephant logo in a professional flat vector icon style. The lighting is soft and even, highlighting the clean lines of the database symbol. It is designed for a technical section in a developer portfolio, conveying reliability and backend engineering depth in a dark-themed environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5UlNV6IqnvX_qYyTcuDw9uxndRuBvgWPwqSYiUelB_osafTTLJfSEaL-_L2NzTHJ_cHfvCx7Jc45Y3qc6EDuQ6aXWjof9k7LL7Npf593tp5hvFKthOe9O7UMgjgaMx6Kim_iciHavNbovoOo7AAe8nZtmKd9N8MxE1fYE_Xg7C1DCQFLPPJiTNeyPaI-jU1qYq0-EABA2RF2uPBnS4aQ3IS8zgpi9GL7c41IK767nxke9L5c0JOShVeuBpnvpR__JAq8_v84mq0Y"/>
+<span class="font-label-md text-label-md">postgreSQL</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="Azure" class="w-12 h-12 mb-4" data-alt="The blue Azure DevOps logo in a modern, professional vector style. The icon features two interlocking loops symbolizing continuous integration and delivery. It is centered in a card with a subtle border, fitting a corporate SaaS aesthetic with high precision and technical focus on a dark surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdRZn3u14TTuqFzdzDbS1qljoKOQf1Tjl8gHt9EbXKi58QtnIWBRZ4decIb_luY2kpkkIpqgNOHizmiXFWeenc5tPB3OFx7kkYmODwV39Wqq1dg_8Hoy6uT3fwdmByYtKfgSBsXIlVb9HIWm-3IOV2--ovYPhOijXBLAv-Wkx_MqpSLvFe6hAr8eHfrvPBmh6N3-rVwfFUkLCNovmCAr1KKw2zvfYFMguziM_QtC0pReuaTBETTWvEcFMo-_zTP8qL9XjHZuRjjA"/>
+<span class="font-label-md text-label-md">Azure DevOps</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square">
+<img alt="AWS" class="w-12 h-12 mb-4" data-alt="The AWS logo with its characteristic black text and orange arrow-smile icon. The design is minimalist and high-contrast, optimized for a tech skills display. It represents cloud computing expertise within a modern developer's technical stack, presented in a clean grid layout on a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_fWfSsfhzeJ-JjSez_iNCxVexVK4Af5troJlU-PFIZY1PIq8zMVfkFJIAK_nSsJhgEmf6YLLxAuPk7yJ5Q_OkE36c-dwojmhg8q9yBDYfjHwJwapW4Kjgz8Lb8OWMpT2cXcOiziYewxBGelJ9lQkMXPiKEml_twOh_6ktAfX30O0otqh5Re3Emmn5nLEyMaCd6K_G9xvQDNxIokTRMlEkPmbeZQA4yHRh1KEUqz1E6oM8VHnl4xEk4zERtcs-2-JwwkQ6n84smF4"/>
+<span class="font-label-md text-label-md">AWS</span>
+</div>
+</div>
+</section>
+<!-- Non-Technical Skills Section -->
+<section>
+<div class="flex items-center gap-3 mb-stack-gap">
+<span class="text-2xl">🎯</span>
+<h2 class="font-headline-md text-headline-md">Non technical</h2>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+<!-- Soft Skill Card -->
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">👥</span>
+<span class="font-label-md text-label-md">Communication &amp; Collaboration</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">📋</span>
+<span class="font-label-md text-label-md">Strategic Partnerships</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">🤝</span>
+<span class="font-label-md text-label-md">Leadership &amp; Teamwork</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">💡</span>
+<span class="font-label-md text-label-md">Curiosity &amp; Learning</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">🏢</span>
+<span class="font-label-md text-label-md">Business Networking</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">🏷️</span>
+<span class="font-label-md text-label-md">Branding and Marketing</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">📅</span>
+<span class="font-label-md text-label-md">Project Management</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">📈</span>
+<span class="font-label-md text-label-md">Personal growth</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">🧩</span>
+<span class="font-label-md text-label-md">Problem Solving</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">🌟</span>
+<span class="font-label-md text-label-md">Client Success</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">⚙️</span>
+<span class="font-label-md text-label-md">Agile &amp; Scrum</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">👔</span>
+<span class="font-label-md text-label-md">IT Consulting</span>
+</div>
+<div class="skill-card flex flex-col items-center justify-center p-6 rounded-xl aspect-square text-center">
+<span class="text-3xl mb-4">🧠</span>
+<span class="font-label-md text-label-md">Creativity</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 border-t border-outline-variant/20 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-4">
+<span class="font-label-md text-label-md font-semibold text-on-surface">DevPortfolio</span>
+<span class="font-caption text-caption text-on-surface-variant text-center md:text-left">
+                © 2024 Developer Portfolio. Built with precision.
+            </span>
+<div class="flex gap-6">
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">LinkedIn</a>
+<a class="font-caption text-caption text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('img, span:first-child');
+                if (icon) icon.classList.add('scale-110');
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('img, span:first-child');
+                if (icon) icon.classList.remove('scale-110');
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Manual | DevPortfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#dae2fd",
+                    "inverse-on-surface": "#283044",
+                    "secondary-fixed-dim": "#ffb690",
+                    "on-tertiary-fixed-variant": "#6900b3",
+                    "on-secondary-fixed-variant": "#783200",
+                    "secondary-fixed": "#ffdbca",
+                    "surface-container-low": "#131b2e",
+                    "surface-container": "#171f33",
+                    "outline-variant": "#424754",
+                    "on-background": "#dae2fd",
+                    "surface-bright": "#31394d",
+                    "surface-container-highest": "#2d3449",
+                    "background": "#0b1326",
+                    "primary-fixed": "#d8e2ff",
+                    "surface-dim": "#0b1326",
+                    "inverse-primary": "#005ac2",
+                    "secondary": "#ffb690",
+                    "on-secondary-fixed": "#341100",
+                    "primary-container": "#4d8eff",
+                    "primary": "#adc6ff",
+                    "on-tertiary-fixed": "#2c0051",
+                    "on-primary-fixed-variant": "#004395",
+                    "surface-container-lowest": "#060e20",
+                    "inverse-surface": "#dae2fd",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-primary": "#002e6a",
+                    "surface": "#0b1326",
+                    "surface-container-high": "#222a3d",
+                    "surface-variant": "#2d3449",
+                    "tertiary-container": "#b76dff",
+                    "on-error": "#690005",
+                    "on-surface-variant": "#c2c6d6",
+                    "tertiary-fixed-dim": "#ddb7ff",
+                    "surface-tint": "#adc6ff",
+                    "tertiary-fixed": "#f0dbff",
+                    "on-secondary-container": "#4a1c00",
+                    "outline": "#8c909f",
+                    "on-primary-container": "#00285d",
+                    "error": "#ffb4ab",
+                    "on-secondary": "#552100",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#ec6a06",
+                    "on-tertiary": "#490080",
+                    "tertiary": "#ddb7ff",
+                    "on-tertiary-container": "#400071",
+                    "error-container": "#93000a",
+                    "on-primary-fixed": "#001a42"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "container-max": "1100px",
+                    "margin-mobile": "20px",
+                    "section-gap": "5rem",
+                    "stack-gap": "1.5rem"
+            },
+            "fontFamily": {
+                    "label-md": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "caption": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.75", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "caption": ["12px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #050505;
+            color: #dae2fd;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .mono-accent {
+            font-family: 'JetBrains Mono', monospace;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-primary/30 selection:text-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full bg-surface/80 backdrop-blur-xl z-50 border-b border-outline-variant/30">
+<nav class="flex justify-between items-center max-w-container-max mx-auto px-gutter h-16">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter cursor-pointer active:scale-95 transition-transform">
+                DevPortfolio
+            </div>
+<div class="hidden md:flex items-center space-x-8 font-label-md text-label-md">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">About</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Blogs</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Skills</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors duration-300" href="#">Contact</a>
+<button class="material-symbols-outlined text-primary hover:scale-110 transition-transform cursor-pointer" data-icon="dark_mode">dark_mode</button>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden material-symbols-outlined text-on-surface" data-icon="menu">menu</button>
+</nav>
+</header>
+<main class="pt-32 pb-24 max-w-[800px] mx-auto px-gutter">
+<!-- Header Section -->
+<section class="mb-12">
+<h1 class="font-display-lg text-display-lg mb-6 tracking-tight text-on-surface">User Manual!</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                This manual provides a comprehensive overview of Abdur. It captures how I operate in a team, how I think through <strong>problems</strong>, <strong>what drives me</strong>, and <strong>how to get the best out of working with me.</strong>
+</p>
+</section>
+<!-- Operating Style Sections (SWOT Style) -->
+<div class="space-y-12">
+<!-- Strength -->
+<article class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-2xl">🔥</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Strength</h2>
+</div>
+<div class="p-6 bg-surface-container border border-outline-variant/30 rounded-lg group-hover:border-primary/50 transition-colors">
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                        Focused when given tasks, naturally sharp and alert, highly curious about trends and real-world problem-solving. Thrive in fast-paced environments and adapt quickly to new challenges.
+                    </p>
+</div>
+</article>
+<!-- Weakness -->
+<article class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-2xl">👎</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Weakness</h2>
+</div>
+<div class="p-6 bg-surface-container border border-outline-variant/30 rounded-lg group-hover:border-primary/50 transition-colors">
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                        Prone to procrastination and distractions. I'm actively overcoming it using the Pomodoro technique and setting tighter daily goals to stay consistent and productive.
+                    </p>
+</div>
+</article>
+<!-- Opportunity -->
+<article class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-2xl">✨</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Opportunity</h2>
+</div>
+<div class="p-6 bg-surface-container border border-outline-variant/30 rounded-lg group-hover:border-primary/50 transition-colors">
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                        Collaborate with me and you’ll have the honor of navigating my never-ending curiosity, which often results in asking "why" about everything that’s “obviously” working.
+                    </p>
+</div>
+</article>
+<!-- Threats -->
+<article class="group">
+<div class="flex items-center gap-3 mb-4">
+<span class="text-2xl">🔪</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Threats</h2>
+</div>
+<div class="p-6 bg-surface-container border border-outline-variant/30 rounded-lg group-hover:border-primary/50 transition-colors">
+<p class="text-on-surface-variant font-body-md leading-relaxed">
+                        Overthinking the past and spreading myself thin can block momentum - frustration often stops me before I regain clarity. I’m learning to prioritize and detach emotionally from delays to keep moving forward.
+                    </p>
+</div>
+</article>
+</div>
+<!-- Divider -->
+<div class="my-16 h-px bg-outline-variant/20"></div>
+<!-- Favourite Quotes Section -->
+<section class="mb-12">
+<div class="flex items-center gap-3 mb-6">
+<span class="text-2xl">🪄</span>
+<h2 class="font-headline-md text-headline-md text-on-surface">Favourite Quotes</h2>
+</div>
+<div class="relative p-8 bg-surface-container-high rounded-lg border-l-4 border-primary">
+<span class="absolute top-4 right-6 text-6xl opacity-10 select-none">"</span>
+<blockquote class="relative z-10">
+<p class="text-xl font-medium text-on-surface italic mb-4">
+                        "The people who are crazy enough to think they can change the world are the ones who do."
+                    </p>
+<footer class="text-primary font-bold tracking-wide">
+                        — Steve Jobs
+                    </footer>
+</blockquote>
+</div>
+</section>
+<!-- CTA Link -->
+<div class="mt-12">
+<a class="inline-flex items-center text-primary font-label-md hover:translate-x-1 transition-transform group" href="#">
+                Get in touch 
+                <span class="material-symbols-outlined ml-2 text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 border-t border-outline-variant/20 bg-surface">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-gutter gap-4">
+<div class="font-label-md text-label-md font-semibold text-on-surface">
+                DevPortfolio
+            </div>
+<div class="font-caption text-caption text-on-surface-variant">
+                © 2024 Developer Portfolio. Built with precision.
+            </div>
+<div class="flex gap-6 font-caption text-caption">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Twitter</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal or subtle atmospheric effects can go here
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('header');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body></html>
