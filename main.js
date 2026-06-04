@@ -37,9 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.scrollTo({ top: 0, behavior: 'instant' });
 
         // Close sidebar on mobile after navigating
-        if (sidebar.classList.contains('open')) {
-            sidebar.classList.remove('open');
-        }
+        closeSidebar();
     }
 
     navLinks.forEach(link => {
@@ -59,20 +57,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // --- Mobile Menu Toggle ---
+    // --- Mobile Menu Toggle & Backdrop ---
     const menuToggle = document.getElementById('mobile-menu-toggle');
-    if (menuToggle && sidebar) {
+    const backdrop = document.getElementById('sidebar-backdrop');
+
+    function toggleSidebar() {
+        if (sidebar && backdrop) {
+            sidebar.classList.toggle('open');
+            backdrop.classList.toggle('open');
+        }
+    }
+
+    function closeSidebar() {
+        if (sidebar && sidebar.classList.contains('open')) {
+            sidebar.classList.remove('open');
+            if (backdrop) backdrop.classList.remove('open');
+        }
+    }
+
+    if (menuToggle) {
         menuToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            sidebar.classList.toggle('open');
+            toggleSidebar();
         });
     }
 
-    // Close sidebar on mobile when clicking outside
+    if (backdrop) {
+        backdrop.addEventListener('click', () => {
+            closeSidebar();
+        });
+    }
+
+    // Close sidebar on mobile when clicking outside (fallback)
     document.addEventListener('click', (e) => {
         if (sidebar && sidebar.classList.contains('open')) {
             if (!sidebar.contains(e.target) && e.target !== menuToggle) {
-                sidebar.classList.remove('open');
+                closeSidebar();
             }
         }
     });
@@ -136,6 +156,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+    });
+
+    // --- Scroll Progress Bar ---
+    const progressBar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+        const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = height > 0 ? (winScroll / height) * 100 : 0;
+        if (progressBar) {
+            progressBar.style.width = scrolled + '%';
+        }
     });
 
 });
