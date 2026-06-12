@@ -1,8 +1,8 @@
 /* Global Design System & Variables */
 :root {
     /* Fonts */
-    --font-primary: 'Inter', sans-serif;
-    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-primary: 'Space Grotesk', sans-serif;
+    --font-heading: 'Archivo', sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
     /* Spacing Base */
@@ -161,6 +161,12 @@ body {
     gap: 8px;
     transition: all var(--transition-fast);
     text-decoration: none;
+    white-space: nowrap;
+}
+.btn-primary span {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .btn-primary:hover {
@@ -194,6 +200,7 @@ body {
 
 .link-action {
     display: inline-flex;
+    align-self: flex-start;
     align-items: center;
     gap: 8px;
     color: var(--primary);
@@ -866,6 +873,10 @@ span.skill-icon {
 .channel span.material-symbols-outlined {
     color: var(--primary);
     font-size: 1.4rem;
+    width: 24px;
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 .channel label {
@@ -1193,7 +1204,8 @@ span.skill-icon {
 .form-group {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 8px;
+    margin: 0;
 }
 .form-group label {
     font-family: var(--font-mono);
@@ -1202,6 +1214,7 @@ span.skill-icon {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
+    margin-bottom: 2px;
 }
 .form-group input, .form-group textarea {
     font-family: var(--font-primary);
@@ -1211,6 +1224,7 @@ span.skill-icon {
     padding: 10px 14px;
     border-radius: var(--border-radius-sm);
     font-size: 0.9rem;
+    margin: 0;
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 .form-group input:focus, .form-group textarea:focus {
@@ -1301,3 +1315,303 @@ span.skill-icon {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Google Guestbook Components --- */
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 3);
+}
+
+.form-toggle-tabs {
+    display: flex;
+    background-color: var(--surface-dim);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--border-radius-md);
+    padding: 4px;
+    gap: 4px;
+}
+
+.form-toggle-btn {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: var(--on-surface-variant);
+    padding: 10px 16px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: calc(var(--border-radius-md) - 2px);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all var(--transition-fast);
+}
+
+.form-toggle-btn:hover {
+    color: var(--on-surface);
+    background-color: rgba(255, 255, 255, 0.03);
+}
+
+body.light-mode .form-toggle-btn:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.form-toggle-btn.active {
+    background-color: var(--surface);
+    color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.guestbook-container {
+    transition: opacity var(--transition-normal);
+}
+
+.auth-card {
+    background-color: var(--surface-dim);
+    border: 1px solid var(--outline-variant);
+    border-radius: var(--border-radius-md);
+    padding: calc(var(--spacing-unit) * 4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: calc(var(--spacing-unit) * 2);
+}
+
+.auth-illustration {
+    font-size: 3.5rem;
+    color: var(--outline);
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-illustration span {
+    font-size: 4rem;
+}
+
+.auth-desc {
+    font-size: 0.9rem;
+    color: var(--on-surface-variant);
+    max-w: 320px;
+    line-height: 1.5;
+}
+
+.btn-google-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: #ffffff;
+    color: #1f2937;
+    border: 1px solid #d1d5db;
+    padding: 12px 24px;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: var(--border-radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    box-shadow: var(--shadow-sm);
+    width: 100%;
+    max-width: 280px;
+}
+
+.btn-google-login:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-google-login:active {
+    transform: translateY(0);
+}
+
+.google-logo-svg {
+    flex-shrink: 0;
+}
+
+.user-profile-bar {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing-unit) * 2);
+    width: 100%;
+    background-color: var(--surface);
+    border: 1px solid var(--outline-variant);
+    padding: calc(var(--spacing-unit) * 2);
+    border-radius: var(--border-radius-md);
+    margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.user-avatar-wrapper {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+}
+
+.user-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-full);
+    object-fit: cover;
+    background-color: var(--outline-variant);
+}
+
+.user-verified-badge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background-color: var(--background);
+    color: #10b981;
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+}
+
+.user-verified-badge span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.user-details {
+    flex: 1;
+    text-align: left;
+}
+
+.user-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--on-surface);
+}
+
+.user-email {
+    font-size: 0.75rem;
+    color: var(--on-surface-variant);
+}
+
+.btn-signout {
+    background: transparent;
+    border: none;
+    color: var(--on-surface-variant);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.btn-signout:hover {
+    color: #ef4444;
+    background-color: rgba(239, 68, 68, 0.1);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Guestbook List Styling */
+.guestbook-list-section {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--outline-variant);
+    margin-top: calc(var(--spacing-unit) * 4);
+    padding-top: calc(var(--spacing-unit) * 4);
+    width: 100%;
+}
+
+.guestbook-entries {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 2);
+    margin-top: calc(var(--spacing-unit) * 2);
+}
+
+.guestbook-empty {
+    text-align: center;
+    padding: calc(var(--spacing-unit) * 4);
+    color: var(--on-surface-variant);
+    font-size: 0.9rem;
+    border: 1px dashed var(--outline-variant);
+    border-radius: var(--border-radius-md);
+    background-color: rgba(255, 255, 255, 0.01);
+}
+
+body.light-mode .guestbook-empty {
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
+.guestbook-entry {
+    background-color: var(--surface-dim);
+    border: 1px solid var(--outline-variant);
+    padding: calc(var(--spacing-unit) * 3);
+    border-radius: var(--border-radius-md);
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing-unit) * 1.5);
+    animation: fadeScale var(--transition-normal) ease-out forwards;
+}
+
+.guestbook-entry-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.entry-user-info {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--spacing-unit) * 1.5);
+}
+
+.entry-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius-full);
+    object-fit: cover;
+    background-color: var(--outline-variant);
+}
+
+.entry-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.entry-name {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--on-surface);
+}
+
+.entry-verified-badge {
+    color: #10b981;
+    display: flex;
+    align-items: center;
+}
+
+.entry-verified-badge span {
+    font-size: 0.95rem;
+}
+
+.entry-date {
+    font-size: 0.75rem;
+    color: var(--on-surface-variant);
+    font-family: var(--font-mono);
+}
+
+.entry-content {
+    font-size: 0.9rem;
+    color: var(--on-surface-variant);
+    line-height: 1.5;
+    padding-left: 0;
+}
+

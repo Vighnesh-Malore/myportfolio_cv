@@ -169,4 +169,219 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Google Guestbook & Sign-in Simulation ---
+    const btnToggleDirect = document.getElementById('btn-toggle-direct');
+    const btnToggleGoogle = document.getElementById('btn-toggle-google');
+    const formDirect = document.getElementById('form-direct');
+    const googleContainer = document.getElementById('google-guestbook-container');
+
+    // Tab Switching
+    if (btnToggleDirect && btnToggleGoogle && formDirect && googleContainer) {
+        btnToggleDirect.addEventListener('click', () => {
+            btnToggleDirect.classList.add('active');
+            btnToggleGoogle.classList.remove('active');
+            formDirect.classList.remove('hidden');
+            googleContainer.classList.add('hidden');
+        });
+
+        btnToggleGoogle.addEventListener('click', () => {
+            btnToggleGoogle.classList.add('active');
+            btnToggleDirect.classList.remove('active');
+            googleContainer.classList.remove('hidden');
+            formDirect.classList.add('hidden');
+        });
+    }
+
+    const btnGoogleSignin = document.getElementById('btn-google-signin');
+    const btnGoogleSignout = document.getElementById('btn-google-signout');
+    const authLoggedOut = document.getElementById('auth-logged-out');
+    const authLoggedIn = document.getElementById('auth-logged-in');
+    
+    const userAvatarImg = document.getElementById('user-avatar-img');
+    const userDisplayName = document.getElementById('user-display-name');
+    const userDisplayEmail = document.getElementById('user-display-email');
+    
+    const formGoogle = document.getElementById('form-google');
+    const googleFormMessage = document.getElementById('google-form-message');
+    const guestbookEntriesList = document.getElementById('guestbook-entries-list');
+
+    // Mock profiles to select randomly on sign in for realism
+    const mockProfiles = [
+        { name: "Vighnesh Malore (Developer Account)", email: "malorevighnesh@gmail.com", avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23149DDD'/><text x='50%' y='60%' font-size='40' font-family='sans-serif' fill='white' font-weight='bold' text-anchor='middle'>VM</text></svg>" },
+        { name: "Suresh Patil", email: "suresh.patil@gmail.com", avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%2310b981'/><text x='50%' y='60%' font-size='40' font-family='sans-serif' fill='white' font-weight='bold' text-anchor='middle'>SP</text></svg>" },
+        { name: "Anjali Sharma", email: "anjali.sharma@gmail.com", avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23f59e0b'/><text x='50%' y='60%' font-size='40' font-family='sans-serif' fill='white' font-weight='bold' text-anchor='middle'>AS</text></svg>" }
+    ];
+
+    // Initial default guestbook entries
+    const initialEntries = [
+        {
+            name: "Rahul Verma (Project Manager)",
+            email: "rahul.verma@outlook.com",
+            avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23ec4899'/><text x='50%' y='60%' font-size='40' font-family='sans-serif' fill='white' font-weight='bold' text-anchor='middle'>RV</text></svg>",
+            message: "Really clean development portfolio! The Habit Tracker APK runs extremely smooth, and the SQLite local database integration speed is very noticeable. Best of luck!",
+            date: "2026-06-10T11:45:00.000Z"
+        },
+        {
+            name: "Priya Rao (Tech Lead)",
+            email: "priya.rao@gmail.com",
+            avatar: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%238b5cf6'/><text x='50%' y='60%' font-size='40' font-family='sans-serif' fill='white' font-weight='bold' text-anchor='middle'>PR</text></svg>",
+            message: "Excellent responsive web frontend design for the dental clinic project. Perfect performance and accessibility ratings. Solid full-stack skills!",
+            date: "2026-06-11T09:20:00.000Z"
+        }
+    ];
+
+    // Load guestbook entries from local storage or set defaults
+    function getEntries() {
+        const stored = localStorage.getItem('guestbook-messages');
+        if (!stored) {
+            localStorage.setItem('guestbook-messages', JSON.stringify(initialEntries));
+            return initialEntries;
+        }
+        return JSON.parse(stored);
+    }
+
+    // Render entries
+    function renderGuestbook() {
+        if (!guestbookEntriesList) return;
+        const entries = getEntries();
+        
+        if (entries.length === 0) {
+            guestbookEntriesList.innerHTML = '<div class="guestbook-empty">No entries yet. Be the first to sign in and leave a message!</div>';
+            return;
+        }
+
+        // Sort entries by date desc
+        const sorted = [...entries].sort((a, b) => new Date(b.date) - new Date(a.date));
+        
+        guestbookEntriesList.innerHTML = sorted.map(entry => {
+            const dateObj = new Date(entry.date);
+            const formattedDate = dateObj.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+
+            return `
+                <div class="guestbook-entry">
+                    <div class="guestbook-entry-header">
+                        <div class="entry-user-info">
+                            <img src="${entry.avatar}" alt="${entry.name}" class="entry-avatar">
+                            <div class="entry-name-wrapper">
+                                <span class="entry-name">${escapeHtml(entry.name)}</span>
+                                <span class="entry-verified-badge" title="Google Verified Account">
+                                    <span class="material-symbols-outlined" style="font-size: 1.1rem;">verified</span>
+                                </span>
+                            </div>
+                        </div>
+                        <span class="entry-date">${formattedDate}</span>
+                    </div>
+                    <p class="entry-content">${escapeHtml(entry.message)}</p>
+                </div>
+            `;
+        }).join('');
+    }
+
+    function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;")
+                  .replace(/</g, "&lt;")
+                  .replace(/>/g, "&gt;")
+                  .replace(/"/g, "&quot;")
+                  .replace(/'/g, "&#039;");
+    }
+
+    // Auth State Manager
+    function updateAuthState() {
+        const user = localStorage.getItem('guestbook-user');
+        if (user) {
+            const userData = JSON.parse(user);
+            if (userAvatarImg) userAvatarImg.src = userData.avatar;
+            if (userDisplayName) userDisplayName.textContent = userData.name;
+            if (userDisplayEmail) userDisplayEmail.textContent = userData.email;
+            
+            if (authLoggedOut) authLoggedOut.classList.add('hidden');
+            if (authLoggedIn) authLoggedIn.classList.remove('hidden');
+        } else {
+            if (authLoggedOut) authLoggedOut.classList.remove('hidden');
+            if (authLoggedIn) authLoggedIn.classList.add('hidden');
+        }
+    }
+
+    // Bind Google Sign in Actions
+    if (btnGoogleSignin) {
+        btnGoogleSignin.addEventListener('click', () => {
+            const originalContent = btnGoogleSignin.innerHTML;
+            btnGoogleSignin.disabled = true;
+            btnGoogleSignin.style.opacity = '0.7';
+            btnGoogleSignin.innerHTML = `
+                <span class="material-symbols-outlined" style="animation: spin 1s linear infinite;">sync</span>
+                <span>Connecting Google Auth...</span>
+            `;
+
+            // Style spin animation inline if not present
+            if (!document.getElementById('google-spin-style')) {
+                const style = document.createElement('style');
+                style.id = 'google-spin-style';
+                style.textContent = `
+                    @keyframes spin {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }
+
+            // Simulate popup confirmation delay
+            setTimeout(() => {
+                const randomProfile = mockProfiles[Math.floor(Math.random() * mockProfiles.length)];
+                localStorage.setItem('guestbook-user', JSON.stringify(randomProfile));
+                updateAuthState();
+                
+                // Reset button
+                btnGoogleSignin.disabled = false;
+                btnGoogleSignin.style.opacity = '1';
+                btnGoogleSignin.innerHTML = originalContent;
+            }, 1200);
+        });
+    }
+
+    if (btnGoogleSignout) {
+        btnGoogleSignout.addEventListener('click', () => {
+            localStorage.removeItem('guestbook-user');
+            updateAuthState();
+        });
+    }
+
+    // Handle posting guestbook entry
+    if (formGoogle) {
+        formGoogle.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const message = googleFormMessage.value.trim();
+            const user = localStorage.getItem('guestbook-user');
+            
+            if (!message || !user) return;
+            
+            const userData = JSON.parse(user);
+            const newEntry = {
+                name: userData.name,
+                email: userData.email,
+                avatar: userData.avatar,
+                message: message,
+                date: new Date().toISOString()
+            };
+
+            const entries = getEntries();
+            entries.push(newEntry);
+            localStorage.setItem('guestbook-messages', JSON.stringify(entries));
+            
+            googleFormMessage.value = '';
+            renderGuestbook();
+        });
+    }
+
+    // Initialize guestbook
+    renderGuestbook();
+    updateAuthState();
+
 });
